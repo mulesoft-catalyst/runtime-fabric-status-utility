@@ -1,0 +1,4 @@
+%dw 2.0
+
+type auto_5bf6b393_b8be_40d3_99b3_043424b32b25_Input_Variables_accessToken = Any
+
