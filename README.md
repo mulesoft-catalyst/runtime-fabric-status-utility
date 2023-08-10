@@ -8,6 +8,7 @@ Table of Contents
       * [Steps to configure and test the utility](#steps-to-configure-and-test-the-utility)
       * [Steps to configure the Utility as a Functional Monitor](#steps-to-configure-the-utility-as-a-functional-monitor)
       * [Considerations](#considerations)
+      * [Platform APIs](#platform-apis)
 
 # Runtime Fabric Status Utility
 
