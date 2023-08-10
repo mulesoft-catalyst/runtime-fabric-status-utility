@@ -45,7 +45,7 @@ This utility is a MuleSoft API with an end-point to retrieve the status of all t
 * Default configurations are defined in ``` /src/main/resources/properties.yaml ```
 * Make sure to encrypt all sensitive data using the Secure Properties Module: https://docs.mulesoft.com/mule-runtime/4.4/secure-configuration-properties.
 * Run the application and test it locally - go to your browser/postman and execute http://localhost:8081/fabrics/list.
-* Once the application is deployed in your deployment environment, execute http://<appurl>/fabrics/list. Update <appurl> appropriately.
+* Once the application is deployed in your deployment environment, execute ```http://<appurl>/fabrics/list```. Update ```<appurl>```appropriately.
 
 ## Steps to configure the Utility as a Functional Monitor
 Create a monitor in Functional monitoring of desired schedule and notification methods with below configurations.
