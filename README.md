@@ -81,4 +81,9 @@ If any of the Fabrics are Inactive, then the Assertion fails and an alert will b
 1. This utility can be deployed in CloudHub or Runtime Fabric. However, if the Runtime Fabric itself gets into an inactive state, then the utility will be inaccessible by the functional monitor. 
 2. This utility currently exposes HTTP endpoint to get the status of Fabrics. Customize this app and update to https if needed.
 
+## Platform APIs
+Below are the Platform APIs used to build this utility. Refer to the [developer portal](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/) to view all the differnt platform APIs.
+1. ```https://anypoint.mulesoft.com//accounts/api/v2/oauth2/token```
+2. ```https://anypoint.mulesoft.com/runtimefabric/api/organizations/{orgId}/fabrics```
+
 *This is an UNLICENSED software, please review the considerations. If you need assistance on extending this application, contact your MuleSoft Customer Success representative or MuleSoft Professional Services. Alternatively, you can customize this application as per your requirements.*
