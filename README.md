@@ -1,7 +1,6 @@
 Table of Contents
 =================
 
-   * [Table of Contents](#table-of-contents)
    * [Runtime Fabric Status Utility](#runtime-fabric-status-utility)
       * [Features](#features)
       * [Utility Details](#utility-details)
@@ -23,8 +22,8 @@ Runtime Fabric Status Utility is a MuleSoft application intended to monitor the 
 ## Utility Details
 This utility is a MuleSoft API with an end-point to retrieve the status of all the fabrics, and respond with details of the fabrics in inactive state. The response can be one of the following.
 * Success Response - No Fabrics configured
-* Success Response - No Fabrics are in Inactive State
-* Error Response - Some Fabrics are in Inactive State with Response code as 503
+* Success Response - All Fabrics are in Active State
+* Error Response - Some Fabrics are in Inactive State(disconnected/degraded) with Response code as 503
 
 ## Requirements
 * Mule Runtime 4.2.2 or above
@@ -34,7 +33,7 @@ This utility is a MuleSoft API with an end-point to retrieve the status of all t
 
 ## Steps to configure and test the utility
 * Clone or download the project from GitHub git clone git@github.com:mulesoft-catalyst/runtime-fabric-status-utility.git
-* Adjust below properties
+* Edit below properties
     ```yaml
     platform:
       orgid: "<orgId>"
@@ -50,7 +49,7 @@ This utility is a MuleSoft API with an end-point to retrieve the status of all t
 ## Steps to configure the Utility as a Functional Monitor
 Create a monitor in Functional monitoring of desired schedule and notification methods with below configurations.
 * Method: GET
-* Endpoint URL:  http://<appurl>/fabrics/list. Update <appurl> appropriately.
+* Endpoint URL: ``` http://<appurl>/fabrics/list```. Update ```<appurl>``` appropriately.
 * Assertions: Status Code Must equal 200
 
 If any of the Fabrics are Inactive, then the Assertion fails and alert will be raised with the configured notification method. You can view the Execution detail in monitor history. The response code will be “503 Service Unavailable” and the response body will be as per below sample.
