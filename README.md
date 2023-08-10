@@ -23,16 +23,16 @@ Runtime Fabric Status Utility is a MuleSoft application intended to monitor the 
 This utility is a MuleSoft API with an end-point to retrieve the status of all the fabrics, and respond with details of the fabrics in inactive state. The response can be one of the following.
 * Success Response - No Fabrics configured
 * Success Response - All Fabrics are in Active State
-* Error Response - Some Fabrics are in Inactive State(disconnected/degraded) with Response code as 503
+* Error Response - Some Fabrics are in Inactive State(Disconnected/Degraded) with Response code as 503
 
 ## Requirements
-* Mule Runtime 4.2.2 or above
+* Mule Runtime 4.4.0 or above
 * Deployment models supported: CloudHub, Runtime Fabric. (This utility has been tested in CloudHub)
 * Anypoint Platform credentials - 
     * A Connected App (client credentials) with the “Read Runtime Fabrics" scope for the appropriate business groups
 
 ## Steps to configure and test the utility
-* Clone or download the project from GitHub git clone git@github.com:mulesoft-catalyst/runtime-fabric-status-utility.git
+* Clone or download the project from GitHub ```git clone git@github.com:mulesoft-catalyst/runtime-fabric-status-utility.git```
 * Edit below properties
     ```yaml
     platform:
@@ -52,7 +52,7 @@ Create a monitor in Functional monitoring of desired schedule and notification m
 * Endpoint URL: ``` http://<appurl>/fabrics/list```. Update ```<appurl>``` appropriately.
 * Assertions: Status Code Must equal 200
 
-If any of the Fabrics are Inactive, then the Assertion fails and alert will be raised with the configured notification method. You can view the Execution detail in monitor history. The response code will be “503 Service Unavailable” and the response body will be as per below sample.
+If any of the Fabrics are Inactive, then the Assertion fails and an alert will be triggered with the configured notification methods. You can view the Execution detail in monitor history. The response code will be “503 Service Unavailable” and the response body will be as per below sample.
 ```json
 {
   "message": "ALERT!!! Some fabrics are in either Degraded or Disconnected State!",
