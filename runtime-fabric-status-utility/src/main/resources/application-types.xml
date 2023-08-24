@@ -209,4 +209,8 @@ type auto_5bf6b393_b8be_40d3_99b3_043424b32b25_Output_Variables_accessToken = An
       </types:output-event>
     </types:processor-declaration>
   </types:enrichment>
+  <types:enrichment select="#ca196d7e-dd38-4953-af96-00c96f05701a"/>
+  <types:enrichment select="#f50ce939-c384-4cde-9083-bdf754e543cc"/>
+  <types:enrichment select="#38b76f81-ab54-438b-a9d8-85991c7480bd"/>
+  <types:enrichment select="#76110cd1-6115-40f7-9795-04f69a73dcbf"/>
 </types:mule>
