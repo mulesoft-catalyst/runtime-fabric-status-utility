@@ -69,10 +69,34 @@ If any of the Fabrics are Inactive, then the Assertion fails and an alert will b
       "fabricStatus": "Disconnected"
     },
     {
-      "fabricId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-      "fabricName": "rtf3",
-      "fabricStatus": "Degraded"
-    }
+            "fabricDetails": {
+                "fabricId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                "fabricName": "rtf3",
+                "fabricStatus": "Degraded"
+            },
+            "failureDetails": {
+                "manageDeployments": {
+                    "healthy": false,
+                    "updatedAt": 1692848950000,
+                    "failedProbes": [
+                        {
+                            "name": "registry-creds",
+                            "lastTransitionAt": 1692349874912
+                        }
+                    ]
+                },
+                "anypointMonitoring": {
+                    "healthy": true,
+                    "updatedAt": 1692848950000,
+                    "failedProbes": []
+                },
+                "infrastructure": {
+                    "healthy": true,
+                    "updatedAt": 1692848950000,
+                    "failedProbes": []
+                }
+            }
+        }
   ],
   "statusCode": 503
 }
